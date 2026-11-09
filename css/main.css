@@ -12,6 +12,9 @@ a:hover{ text-decoration:underline;}
 .clear{ clear:both;}
 img{ border:0;}
 
+/* 页头 logo：favicon-180 透明版，按 70px 高显示以适配 92px 页头 */
+.top .l img.site-logo { height: 70px; width: auto; display: block; margin: 11px 0 0 30px; }
+
 .mTop5{ margin-top:5px;}
 .mTop10{ margin-top:10px;}
 .mBottom10{margin-bottom:10px;}
@@ -162,6 +165,11 @@ ul.label_pad li a {
     padding: 0 5px 0 20px;
 }
 ul.label_pad li span{ float:right;}
+/* 首页新闻动态：固定高度，超出显示滚动条 */
+ul.label_pad.scroll_list{ height:130px; overflow-y:auto; overflow-x:hidden;}
+ul.label_pad.scroll_list::-webkit-scrollbar{ width:6px;}
+ul.label_pad.scroll_list::-webkit-scrollbar-thumb{ background:#ef6c0e; border-radius:3px;}
+ul.label_pad.scroll_list::-webkit-scrollbar-track{ background:#f5f0e8; border-radius:3px;}
 
 div.index_img{ width:768px;}
 div#demox, div#demox1 {
@@ -321,6 +329,11 @@ div.page{
     padding: 2px 8px;
 }
 div.page a.current{ color:#C00; font-weight:bold;}
+
+/***图片灯箱（live/prolist 图片点击放大）***/
+#img-lightbox{ display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.78); z-index:99999; text-align:center; cursor:zoom-out; }
+#img-lightbox .lb-close{ position:absolute; top:10px; right:22px; color:#fff; font-size:36px; line-height:36px; font-family:Arial,sans-serif; text-shadow:0 0 4px #000; }
+#img-lightbox img{ max-width:88%; max-height:86%; margin-top:5vh; background:#fff; padding:6px; box-shadow:0 0 24px rgba(0,0,0,0.6); border:1px solid #ddd; cursor:default; }
 
 /***详情***/
 .news_detail_title {
